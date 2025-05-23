@@ -1,0 +1,25 @@
+(defwindow bar
+  :namespace "bar"
+  :monitor 0
+  :exclusive true
+  :stacking "fg"
+  :geometry (geometry :x 0 :y 0 :width 1920 :height 28
+                               :anchor "top center")
+  (box :class "bar"
+    (widget-left)
+    (label :text "Hyprland + Eww")
+    (widget-right)))
+
+
+(defwidget widget-left []
+(box :class "widget-left"
+:halign "start"
+(label :text "left")))
+
+(defwidget widget-right
+  []
+(box :class "widget-right"
+:halign "end"
+(battery-widget)
+(clock-widget)
+  (date-widget)))

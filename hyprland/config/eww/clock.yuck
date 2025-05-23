@@ -1,0 +1,5 @@
+(defwidget clock-widget []
+  (box
+    :halign "center"
+    :class "clock-widget"
+    (label :text clock-short)))

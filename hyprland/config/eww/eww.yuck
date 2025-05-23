@@ -1,0 +1,9 @@
+(include "battery.yuck")
+(include "clock.yuck")
+(include "date.yuck")
+(include "bar.yuck")
+(include "polls.yuck")
+
+
+
+

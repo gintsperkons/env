@@ -1,0 +1,5 @@
+(defwidget date-widget []
+  (box
+    :halign "center"
+    :class "date-widget"
+    (label :text date-short)))

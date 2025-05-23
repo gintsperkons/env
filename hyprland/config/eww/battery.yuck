@@ -1,0 +1,3 @@
+(defwidget battery-widget []
+  (box :class "battery-widget battery-status-${battery-class}"
+    (label :text "${battery-icon} ${battery-percentage}%")))

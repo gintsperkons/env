@@ -1,0 +1,14 @@
+(defpoll battery-percentage :interval "1s"
+  "scripts/battery.sh percentage")
+
+(defpoll battery-icon :interval "1s"
+  "scripts/battery.sh icon")
+
+(defpoll battery-class :interval "1s"
+  "scripts/battery.sh class")
+
+(defpoll clock-short :interval "1s"
+  "date +%H:%M:%S")
+
+(defpoll date-short :interval "1s"
+  "date +%d-%m-%Y")
