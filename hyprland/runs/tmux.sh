@@ -4,10 +4,8 @@ sudo pacman -S tmux --needed --noconfirm
 # Get the script's directory
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Copy the full 'eww' config folder
-echo "$SCRIPT_DIR"
 
-cp "$SCRIPT_DIR/../config/tmux/tmux.conf" ~/.tmux.conf || echo "Conf Copy Failed"
+cp "$SCRIPT_DIR/../../configs/tmux/tmux.conf" ~/.tmux.conf || echo "Conf Copy Failed"
 
 
 
