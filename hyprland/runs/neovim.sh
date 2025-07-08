@@ -1,7 +1,7 @@
 
 
 echo "📦 Installing Neovim..."
-sudo pacman -S --noconfirm --needed neovim git curl lazygit
+sudo pacman -S --noconfirm --needed neovim git curl lazygit luarocks
 
 # Get the script's directory
 SCRIPT_DIR=$(dirname "${BASH_SOURCE[0]}")

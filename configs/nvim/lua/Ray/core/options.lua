@@ -8,6 +8,7 @@ vim.opt.autoindent = true
 --vim.g.netre_banner = 1
 
 
+vim.g.ai_cmp = true
 
 
 vim.opt.guicursor = ""
