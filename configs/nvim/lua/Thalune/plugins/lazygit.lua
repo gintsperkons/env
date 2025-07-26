@@ -1,11 +1,8 @@
 return {
   "kdheepak/lazygit.nvim",
   cmd = "LazyGit",
-  keys = {
-    { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
-  },
+  keys = require("Thalune.core.keymaps").lazygit,
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
 }
-

@@ -1,0 +1,30 @@
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+window#waybar {
+  background-color: rgba(18, 18, 18, 0.5);
+  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+  color: #ffffff;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+#clock {
+  padding: 5px 0;
+}
+#battery {
+  font-size: 20px;
+  padding: 0 15px;
+  color: rgba(0, 255, 0, 1);
+}
+#battery.critical {
+  color: rgba(255, 0, 0, 1);
+}
+#battery.warning {
+  color: rgba(255, 86, 0, 1);
+}
+#battery.good {
+  color: rgba(0, 159, 0, 1);
+}

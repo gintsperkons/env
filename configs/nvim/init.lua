@@ -1,2 +1,2 @@
-require("Ray.core")
-require("Ray.lazy")
+require("Thalune.core")
+require("Thalune.lazy")

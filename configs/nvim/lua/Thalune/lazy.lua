@@ -19,7 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- import your plugins
-    { import = "Ray.plugins" },
+    { import = "Thalune.plugins" },
   },
   checker = { enabled = true },
 })

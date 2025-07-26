@@ -9,7 +9,7 @@ return {
     config = function()
       local builtin = require('telescope.builtin')
       require('telescope').load_extension('file_browser')
-      vim.keymap.set('n', '<C-e>', function()
+      vim.keymap.set('n', '<leader>fe', function()
         require('telescope').extensions.file_browser.file_browser({
           select_buffer = true,
           path = "%:p:h",    -- start in current file's directory

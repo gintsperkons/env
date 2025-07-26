@@ -11,6 +11,14 @@ return {
   --@module "neo-tree"
   --@type neotree.Config?
   opts = {
+    event_handlers = {
+      {
+        event = "file_opened",
+        handler = function()
+          require("neo-tree").close_all()
+        end,
+      },
+    },
     close_if_last_window = true,
     enable_git_status = true,
     enable_diagnostics = true,
@@ -24,12 +32,8 @@ return {
       use_libuv_file_watcher = true,
     },
     window = {
-      position = "left",
       width = 30,
     },
   },
-  config = function(plugin, opts)
-    require("neo-tree").setup(opts)
-    vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal right<CR>")
-  end,
+  keys = require("Thalune.core.keymaps").neo_tree,
 }
