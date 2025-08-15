@@ -1,0 +1,5 @@
+
+
+
+paru -S --skipreview spotify
+
