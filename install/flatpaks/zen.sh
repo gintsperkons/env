@@ -1,1 +1,1 @@
-flatpak install app.zen_browser.zen -y
+sudo flatpak install app.zen_browser.zen -y

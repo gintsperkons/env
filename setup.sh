@@ -15,9 +15,12 @@ bash $BASE_DIR/install/pre/pacman.sh
 
 bash $BASE_DIR/install/package.sh
 bash $BASE_DIR/install/flatpaks.sh
+bash $BASE_DIR/install/others.sh
 
 bash $BASE_DIR/install/webapps.sh
 
 cp -r $BASE_DIR/config/* $HOME/.config/
 
 bash $BASE_DIR/install/post/zsh.sh
+
+hyprctl reload

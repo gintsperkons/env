@@ -1,0 +1,1 @@
+sudo -S --needed --noconfirm ttf-jetbrains-mono-nerd

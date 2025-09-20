@@ -1,0 +1,1 @@
+sudo pacman -S --noconfirm  --needed xclip xsel wl-clipboard

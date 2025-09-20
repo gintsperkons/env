@@ -1,0 +1,1 @@
+sudo flatpak install com.visualstudio.code -y
