@@ -10,7 +10,7 @@ sudo pacman -Syu git --noconfirm --needed
 BRANCH=${1:-main}   # Use first argument or default to 'main'
 
 # Clone or update repository
-TARGET_DIR="$HOME/.local/share/myEnv"
+TARGET_DIR="$HOME/.local/share/hyprarchTemp"
 
 if [ -d "$TARGET_DIR/.git" ]; then
     echo "Updating existing repo..."
@@ -26,3 +26,5 @@ fi
 
 # Run install script
 bash $TARGET_DIR/setup.sh
+
+rm -rf "$TARGET_DIR"
