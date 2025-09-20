@@ -1,9 +1,7 @@
-
-
 sudo pacman -S --noconfirm --needed neovim git curl lazygit luarocks ruff nodejs npm
 
 
-npm install -g   typescript   typescript-language-server   prettier   eslint   eslint_d   stylelint   htmlhint   vscode-langservers-extracted   
+sudo npm install -g   typescript   typescript-language-server   prettier   eslint   eslint_d   stylelint   htmlhint   vscode-langservers-extracted   
 
 
 # Get the script's directory

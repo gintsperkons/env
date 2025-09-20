@@ -1,0 +1,1 @@
+flatpak install com.spotify.Client -y
