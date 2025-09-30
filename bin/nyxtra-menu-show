@@ -23,31 +23,39 @@ FULL_MENU=("${PARENT_ORDER[@]}" "${CHILD_ITEMS[@]}")
 # First prompt: search or pick directly
 SEARCH=$(printf '%s\n' "${FULL_MENU[@]}" | rofi -dmenu -i -p "Search or pick:")
 
-SELECTED=$SEARCH
+SELECTED="$SEARCH"
 
 # If user picked a parent, show its children
 if [[ " ${PARENT_ORDER[*]} " =~ " ${SEARCH} " ]]; then
     CHILDREN=${MENU[$SEARCH]}
     CHOICE=$(printf '%s\n' $CHILDREN | rofi -dmenu -i -p "$SEARCH →")
     SELECTED="$SEARCH / $CHOICE"
-    echo "Selected: $SELECTED"
-
-if SELECTED == "Power / Shutdown"; then
-    systemctl poweroff
-elif SELECTED == "Power / Reboot"; then
-    systemctl reboot
-elif SELECTED == "Settings / Wi-Fi"; then
-    gnome-control-center wifi
-elif SELECTED == "Settings / Display"; then
-    gnome-control-center display
-elif SELECTED == "Install / zsh"; then
-    bash ~/env/install/packages/zsh.sh install
-elif SELECTED == "Install / vim"; then
-    bash ~/env/install/packages/vim.sh install
-elif SELECTED == "Install / tmux"; then
-    bash ~/env/install/packages/tmux.sh install
 fi
 
-else
-    echo "Selected: $SELECTED"
-fi
+# Actions based on final selection
+case "$SELECTED" in
+    "Power / Shutdown")
+        systemctl poweroff
+        ;;
+    "Power / Reboot")
+        systemctl reboot
+        ;;
+    "Settings / Wi-Fi")
+        gnome-control-center wifi
+        ;;
+    "Settings / Display")
+        gnome-control-center display
+        ;;
+    "Install / zsh")
+        bash ~/env/install/packages/zsh.sh install
+        ;;
+    "Install / vim")
+        bash ~/env/install/packages/vim.sh install
+        ;;
+    "Install / tmux")
+        bash ~/env/install/packages/tmux.sh install
+        ;;
+    *)
+        echo "Selected: $SELECTED"
+        ;;
+esac
