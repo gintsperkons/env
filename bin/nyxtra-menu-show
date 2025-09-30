@@ -3,8 +3,6 @@
 # Define parent -> children mapping
 declare -A MENU
 MENU["Power"]="Reboot Shutdown"
-MENU["Settings"]="Wi-Fi Display"
-MENU["Install"]="zsh vim tmux"
 
 # Parent menu order
 PARENT_ORDER=("Power" "Settings" "Install")
@@ -39,21 +37,6 @@ case "$SELECTED" in
         ;;
     "Power / Reboot")
         systemctl reboot
-        ;;
-    "Settings / Wi-Fi")
-        gnome-control-center wifi
-        ;;
-    "Settings / Display")
-        gnome-control-center display
-        ;;
-    "Install / zsh")
-        bash ~/env/install/packages/zsh.sh install
-        ;;
-    "Install / vim")
-        bash ~/env/install/packages/vim.sh install
-        ;;
-    "Install / tmux")
-        bash ~/env/install/packages/tmux.sh install
         ;;
     *)
         echo "Selected: $SELECTED"

@@ -17,10 +17,10 @@ echo ""
 BASE_DIR=$(dirname "$(realpath "$0")")
 
 
-mkdir -p $HOME/.local/share/hyprarch/wallpapers
-cp -r $BASE_DIR/wallpapers/* $HOME/.local/share/hyprarch/wallpapers/
-mkdir -p $HOME/.local/share/hyprarch/bin
-cp -r $BASE_DIR/bin/* $HOME/.local/share/hyprarch/bin/
+mkdir -p $HOME/.local/share/nyxtra/wallpapers
+cp -r $BASE_DIR/wallpapers/* $HOME/.local/share/nyxtra/wallpapers/
+mkdir -p $HOME/.local/share/nyxtra/bin
+cp -r $BASE_DIR/bin/* $HOME/.local/share/nyxtra/bin/
 
 
 
