@@ -1,0 +1,24 @@
+* {
+    background: #1e1e2e;
+    foreground: #cdd6f4;
+    selected-background: #89b4fa;
+    selected-foreground: #1e1e2e;
+    border: 2px;
+    border-color: #89b4fa;
+    border-radius: 8px;
+    padding: 6px;
+    spacing: 4px;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+window {
+    transparency: "real";
+    border: 2px;
+    border-color: @selected-background;
+}
+
+inputbar {
+    children: [prompt, entry];
+    padding: 8px;
+    background: #11111b;
+}

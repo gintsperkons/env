@@ -33,10 +33,6 @@
   "text-empty": "No Notifications",
   "script-fail-notify": true,
   "scripts": {
-    "play-ocean-sound": {
-      "exec": "hyprarch-notification-notify %urgency%",
-      "urgency": "Normal"
-    }
   },
   "notification-visibility": {
     "example-name": {

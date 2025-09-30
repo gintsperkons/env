@@ -1,16 +1,13 @@
-sudo pacman -S --noconfirm --needed neovim git curl lazygit luarocks ruff nodejs npm
+if [ "$1" == "install" ]; then
+    sudo pacman -S --noconfirm --needed neovim git curl lazygit luarocks ruff nodejs npm
+
+    sudo npm install -g   typescript   typescript-language-server   prettier   eslint   eslint_d   stylelint   htmlhint   vscode-langservers-extracted
+
+fi
 
 
-sudo npm install -g   typescript   typescript-language-server   prettier   eslint   eslint_d   stylelint   htmlhint   vscode-langservers-extracted   
-
-
-# Get the script's directory
-SCRIPT_DIR=$(dirname "${BASH_SOURCE[0]}")
-
-pwd
-
-# Copy the full 'eww' config folder
-cp -r "$SCRIPT_DIR/../../config/nvim" ~/.config/
-
-pwd
-
+if [ "$1" == "config" ]; then
+    SCRIPT_DIR=$(dirname "${BASH_SOURCE[0]}")
+    mkdir -p ~/.config
+cp -r "$SCRIPT_DIR/../../config/nvim/"* ~/.config/nvim/
+fi

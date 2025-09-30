@@ -2,7 +2,6 @@
 
 THIS_SCRIPT_DIR=$(dirname "$(realpath "$0")")
 InstallLocation="$THIS_SCRIPT_DIR"
-sudo pacman -Rns --noconfirm - < "$InstallLocation/pkgRm.txt"
 
 
 run_packages() {
@@ -18,7 +17,7 @@ run_packages() {
 }
 
 # Example usage
-PackageLocation="$InstallLocation/packages/"
+PackageLocation="$InstallLocation/aur/"
 echo "Installing packages from $PackageLocation"
 run_packages "$PackageLocation" "install"
 echo "Configuring packages from $PackageLocation"
