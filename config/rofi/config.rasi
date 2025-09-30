@@ -1,11 +1,13 @@
+@theme "/home/gints/.config/rofi/theme.rasi"
+
 configuration {
-/*	modes: "window,drun,run,ssh";*/
-/*	font: "mono 24";*/
+	modes: "window,drun,run,ssh";
+	//font: "mono 64";
+	show-icons: true;
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
-/*	show-icons: true;*/
 /*	preview-cmd: ;*/
 /*	on-selection-changed: ;*/
 /*	on-mode-changed: ;*/
@@ -165,4 +167,30 @@ configuration {
       directories-first: true;
       sorting-method:    "name";
   }
+}
+
+* {
+    foreground: #cdd6f4;
+}
+
+window {
+    transparency: "real";
+    border: 2px;
+    width: 50%;
+    height: 70%;
+}
+
+inputbar {
+    children: [prompt, entry];
+    padding: 8px;
+    background: #11111b;
+}
+
+element {
+    background: #1e1e2e63;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 0;
+    font-size: 64px;
+    spacing: 5px;
 }
