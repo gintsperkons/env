@@ -168,29 +168,3 @@ configuration {
       sorting-method:    "name";
   }
 }
-
-* {
-    foreground: #cdd6f4;
-}
-
-window {
-    transparency: "real";
-    border: 2px;
-    width: 50%;
-    height: 70%;
-}
-
-inputbar {
-    children: [prompt, entry];
-    padding: 8px;
-    background: #11111b;
-}
-
-element {
-    background: #1e1e2e63;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border: 0;
-    font-size: 64px;
-    spacing: 5px;
-}

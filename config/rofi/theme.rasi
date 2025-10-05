@@ -11,7 +11,7 @@
     alternate-urgent-background: var(lightbg);
     lightbg:                     #000000aa;
     background-color:            transparent;
-    border-color:                var(foreground);
+    //border-color:                var(foreground);
     normal-background:           var(background);
     selected-urgent-background:  var(red);
     alternate-active-background: var(lightbg);
@@ -36,7 +36,7 @@ element {
     cursor:         pointer;
     padding-bottom: 20px ;
     padding:        1px ;
-    font-size:      64px ;
+    font-size:      24px ;
     padding-top:    20px ;
     border:         0;
     background:     rgba ( 30, 30, 46, 39 % );
@@ -84,11 +84,11 @@ element-text {
     highlight:        inherit;
     text-color:       inherit;
     padding:          15px;
-    font: "monospace 24";
+    font: "monospace 17";
 }
 element-icon {
     background-color: transparent;
-    size:             4.0000em ;
+    size:             3.0000em ;
     cursor:           inherit;
     text-color:       inherit;
 }
@@ -99,7 +99,7 @@ window {
     transparency:     "real";
     border:           2px ;
     height:           70.0000% ;
-    border-radius:    32px ;
+    border-radius:    8px ;
 }
 mainbox {
     padding: 0;
@@ -180,6 +180,7 @@ entry {
     placeholder:       "Type to filter";
 }
 prompt {
+    enabled: false;
     spacing:    0;
     text-color: var(normal-foreground);
 }
