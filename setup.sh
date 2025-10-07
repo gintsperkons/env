@@ -31,7 +31,7 @@ bash $BASE_DIR/install/pre/pacman.sh
 bash $BASE_DIR/install/package.sh
 bash $BASE_DIR/install/aur.sh
 bash $BASE_DIR/install/webapps.sh
-bash $BASE_DIR/install/others.sh
+# bash $BASE_DIR/install/others.sh
 
 
 bash $BASE_DIR/install/post/zsh.sh

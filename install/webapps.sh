@@ -8,6 +8,7 @@ apps=(
   ["ClickUp"]="https://app.clickup.com"
   ["Twitch"]="https://www.twitch.tv"
   ["GitHub"]="https://github.com"
+  ["Twitch"]="https://www.twitch.tv"
 )
 
 for name in "${!apps[@]}"; do
