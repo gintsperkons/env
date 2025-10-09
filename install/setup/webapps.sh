@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Installing WebApps"
 declare -A apps
 apps=(
   ["ChatGPT"]="https://chat.openai.com"
@@ -13,7 +14,7 @@ apps=(
 
 for name in "${!apps[@]}"; do
   url=${apps[$name]}
-  hyprarch-webapp-install "$name" "$url"
+  $NYXTRA_STORAGE/bin/nyxtra-webapp-install "$name" "$url"
 done
 
 update-desktop-database ~/.local/share/applications
