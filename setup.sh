@@ -17,8 +17,6 @@ export NYXTRA_INSTALLER_BASE="$(dirname "$(realpath "$0")")"
 
 source $NYXTRA_INSTALLER_BASE/install/pre/env.sh
 
-echo $NYXTRA_STORAGE
-
 
 mkdir -p "$HOME/.local/share/applications"
 mkdir -p "$HOME/.local/share/icons"
